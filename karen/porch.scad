@@ -1,5 +1,16 @@
 deck_frame_h = 6;
 deck_support_h = 8;
+deck_l=24*12;
+door_left=deck_l-21;
+door_h=72;
+
+// door
+color("white"){
+translate([door_left,0,deck_frame_h]) cube([3.5,1,door_h]);
+    translate([door_left-36,0,deck_frame_h]) cube([3.5,1,door_h]);
+    translate([door_left-36,0,deck_frame_h+72]) cube([36+3.5,1,3.5]);
+    
+}
 
 color("Sienna"){
 translate([0,0,0]) cube([96,2,deck_frame_h]);
@@ -40,12 +51,12 @@ translate([144,98,-deck_support_h]) cube([144,2,deck_support_h]);
 }
 
 color("Brown"){
-translate([2,2,-36]) cube([4,4,96]);
-translate([92,2,-36]) cube([4,4,96]);
-translate([188,2,-36]) cube([4,4,96]);
-translate([282,2,-36]) cube([4,4,96]);
-translate([2,94,-36]) cube([4,4,36+deck_frame_h]);
-translate([92,94,-36]) cube([4,4,36+deck_frame_h]);
-translate([188,94,-36]) cube([4,4,36+deck_frame_h]);
-translate([282,94,-36]) cube([4,4,36+deck_frame_h]);
+translate([2,2,-36]) cube([4,4,144]);
+translate([92,2,-36]) cube([4,4,144]);
+translate([188,2,-36]) cube([4,4,144]);
+translate([282,2,-36]) cube([4,4,144]);
+translate([2,94,-36]) cube([4,4,124]);
+translate([92,94,-36]) cube([4,4,124]);
+translate([188,94,-36]) cube([4,4,124]);
+translate([282,94,-36]) cube([4,4,124]);
 }
